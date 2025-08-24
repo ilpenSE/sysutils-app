@@ -18,6 +18,8 @@
             "polyfills": [
               "zone.js"
             ],
+            "baseHref": "./",
+            "deployUrl": "./",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -26,7 +28,25 @@
               }
             ],
             "styles": [
+              "src/app/app.css",
               "src/styles.css"
+            ],
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "20kb",
+                "maximumError": "50kb"
+              },
+              {
+                "type": "bundle",
+                "name": "styles",
+                "baseline": "50kb"
+              }
             ]
           },
           "configurations": {

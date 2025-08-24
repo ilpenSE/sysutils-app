@@ -9,7 +9,8 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
-    }
+    },
+    webSecurity: false  // Geliştirme için, production'da kaldır
   });
 
   win.loadFile(path.join(__dirname, 'dist/sysutils-app/browser/app.html'));
