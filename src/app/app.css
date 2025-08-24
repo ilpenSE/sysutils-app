@@ -1,0 +1,9 @@
+html {
+  background-color: black;
+  color: white;
+}
+
+::selection {
+  background-color: rgb(118, 198, 244);
+  color: rgb(136, 136, 136);
+}
